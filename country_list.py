@@ -1,5 +1,4 @@
-def get_countries():
-    return [
+country_list = [
     "Afghanistan",
     "Albania",
     "Algeria",

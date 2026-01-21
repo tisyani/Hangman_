@@ -1,4 +1,6 @@
-from country_list import get_countries
+import random
+from country_list import country_list
+from ascii import stages
 
-countries = get_countries()
-print(countries)
+chosen_word = random.choice(country_list)
+word_length = len(chosen_word)
