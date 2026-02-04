@@ -52,11 +52,12 @@ def play_game():
     revealed_letters = set()
     wrong_letters = set()
     guessed_letters = set()
-
+    picture_counter = 0 
+    
     print("\nLet's play Hangman!\n")
 
-    while True:
-        print(stages[0])
+    while True: 
+        print(stages[picture_counter])
         print("Word:", display_of_word(word, revealed_letters))
         print("Wrong guesses:", " ".join(sorted(wrong_letters)))
         print(f"Lives left: {lives}\n")
@@ -82,6 +83,7 @@ def play_game():
         else:
             wrong_letters.add(guess)
             lives -= 1
+            picture_counter += 1
             print("Wrongg! :/ ")
             print(f"You lost a life! Lives remaining: {lives}\n")
 
