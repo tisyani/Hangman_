@@ -42,7 +42,6 @@ def is_word_revealed(word, revealed_letters):
     return all(char.lower() in revealed_letters for char in word)
 
 
-
 #the actual game part
 
 
@@ -83,7 +82,6 @@ def play_game():
         else:
             wrong_letters.add(guess)
             lives -= 1
-            stages[0+1]
             print("Wrongg! :/ ")
             print(f"You lost a life! Lives remaining: {lives}\n")
 
@@ -93,7 +91,7 @@ def play_game():
             return
 
         if lives <= 0:
-            print(stages[7])
+            print(stages[-1])
             print("You lost! :(")
             print("The word was:", word)
             return
